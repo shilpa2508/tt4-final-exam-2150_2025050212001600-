@@ -1,0 +1,14 @@
+services:
+  backend:
+    build:
+      context: ./backend/ContactManagerAPI
+      dockerfile: Dockerfile
+    ports:
+      - "5000:80"
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    ports:
+      - "3000:80"
